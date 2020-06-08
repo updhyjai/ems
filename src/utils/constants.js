@@ -24,3 +24,9 @@ export const MONTH = [
   "Nov",
   "Dec",
 ];
+
+export const BASE_URI = "https://gentle-fortress-54474.herokuapp.com";
+
+export const ENDPOINTS = {
+  EVENTS: "/events",
+};

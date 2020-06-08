@@ -23,13 +23,11 @@ const CampaignList = ({
       if (key === name) continue;
       status[key] = false;
     }
-    console.log(status);
     if (name in status) {
       status[name] = !status[name];
     } else {
       status[name] = true;
     }
-    console.log(status);
     setCalenderStatus(status);
   };
 

@@ -37,7 +37,6 @@ export const getEventType = (eventDate) => {
 };
 export const handleRedirectPath = (date) => {
   const eventtype = getEventType(date);
-  console.log(eventtype);
   switch (eventtype) {
     case EVENT_TYPE.LIVE:
       return PATH.LIVE;
