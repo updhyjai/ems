@@ -26,3 +26,19 @@
 .heading {
   margin-top: 100px;
 }
+@media screen and (max-width: 1080px) {
+  #root {
+    width: max-content;
+  }
+}
+@media screen and (max-width: 520px) {
+  #root {
+    width: max-content;
+  }
+  .nav {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    border: none;
+  }
+}
