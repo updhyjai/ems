@@ -1,13 +1,28 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+#root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.app-logo {
+  width: 150px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav {
+  border-bottom: 1px solid lightgray;
+  margin-top: 20px;
+}
+.nav-link {
+  color: #597592;
+  border-radius: 0px !important;
+}
+.navbar-brand {
+  width: 1080px !important;
+  margin: auto !important;
+}
+.heading {
+  margin-top: 100px;
 }
