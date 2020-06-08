@@ -98,6 +98,7 @@ const CampaignList = ({
                   </button>
                   {openCalender && openCalender[campaign.name] && (
                     <Calender
+                      style={{ position: "absolute" }}
                       className="calender"
                       key={campaign.name}
                       value={new Date(campaign.date)}
