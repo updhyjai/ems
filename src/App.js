@@ -70,7 +70,6 @@ class App extends React.PureComponent {
   };
 
   render() {
-    console.log(this.state.apiCallInProgress);
     return (
       <div className="container-fluid">
         <AppBar />
