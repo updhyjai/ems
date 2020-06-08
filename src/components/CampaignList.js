@@ -9,6 +9,7 @@ import calendarImage from "../images/table/calendar.png";
 import reportImage from "../images/table/report.png";
 import fileImage from "../images/table/file.png";
 import { formatDate, getDays } from "../utils/helper";
+import { BASE_URI } from "../utils/constants";
 
 const CampaignList = ({
   campaigns,
@@ -58,7 +59,7 @@ const CampaignList = ({
                 <img
                   alt=""
                   className="campaign-image"
-                  src={campaign.image_url}
+                  src={BASE_URI + campaign.image_url}
                 />
                 <span className="action-name">
                   <h6>{campaign.name}</h6>

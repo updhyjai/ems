@@ -32,6 +32,7 @@ class App extends React.PureComponent {
         if (!this.validateCampaignData(campaignData)) {
           throw new Error("Campaign Data is not valid");
         }
+        console.log(campaignData);
         const { liveEvents, pastEvents, upcomingEvents } = filterCampaignData(
           campaignData
         );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "react-responsive-modal";
 import "./PriceModal.css";
+import { BASE_URI } from "../utils/constants";
 
 PricingModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
@@ -25,7 +26,7 @@ function PricingModal({ isOpen, price, image_url, onClose, name, region }) {
       <Modal open={modalState} onClose={onCloseModal}>
         <div className="pricing_modal">
           <div className="modal-header">
-            <img alt="" className="modal-image" src={image_url} />
+            <img alt="" className="modal-image" src={BASE_URI + image_url} />
 
             <span className="modal-name">
               <h6>{name}</h6>
