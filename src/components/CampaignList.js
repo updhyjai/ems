@@ -38,77 +38,79 @@ const CampaignList = ({
   };
 
   return (
-    <table className="table">
-      <thead className="table-head">
-        <tr>
-          <th className="campaign-date-td">DATE</th>
-          <th className="campaign-name-td">CAMPAIGN</th>
-          <th>VIEW</th>
-          <th colSpan={4}>ACTIONS</th>
-        </tr>
-      </thead>
-      <tbody className="table-body">
-        {campaigns.map((campaign) => {
-          return (
-            <tr key={campaign.name}>
-              <td className="campaign-date-td">
-                <h6>{formatDate(campaign.date)}</h6>
-                <p>{getDays(campaign.date)}</p>
-              </td>
-              <td className="campaign-name-td">
-                <img
-                  alt=""
-                  className="campaign-image"
-                  src={BASE_URI + campaign.image_url}
-                />
-                <span className="action-name">
-                  <h6>{campaign.name}</h6>
-                  <p>{campaign.region}</p>
-                </span>
-              </td>
-              <td>
-                <button
-                  className="action-button"
-                  onClick={() => onClickViewPrice(campaign)}
-                >
-                  <img alt="" className="action-image" src={priceImage} />
-                  <span className="action-name">View Pricing</span>
-                </button>
-              </td>
-              <td className="action-container">
-                <button className="action-button">
-                  <img alt="" className="action-image" src={fileImage} />
-                  <span className="action-name">CSV</span>
-                </button>
-              </td>
-              <td>
-                <button className="action-button">
-                  <img alt="" className="action-image" src={reportImage} />
-                  <span className="action-name">Report</span>
-                </button>
-              </td>
-              <td>
-                <button
-                  className="action-button"
-                  onClick={() => handleClickScheduleButton(campaign.name)}
-                >
-                  <img alt="" className="action-image" src={calendarImage} />
-                  <span className="action-name">Schedule Again</span>
-                </button>
-                {openCalender && openCalender[campaign.name] && (
-                  <Calender
-                    className="calender"
-                    key={campaign.name}
-                    value={new Date(campaign.date)}
-                    onChange={(date) => onDateSelection(campaign, date)}
+    <div className="table-container">
+      <table className="table">
+        <thead className="table-head">
+          <tr>
+            <th className="campaign-date-td">DATE</th>
+            <th className="campaign-name-td">CAMPAIGN</th>
+            <th>VIEW</th>
+            <th colSpan={4}>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody className="table-body">
+          {campaigns.map((campaign) => {
+            return (
+              <tr key={campaign.name}>
+                <td className="campaign-date-td">
+                  <h6>{formatDate(campaign.date)}</h6>
+                  <p>{getDays(campaign.date)}</p>
+                </td>
+                <td className="campaign-name-td">
+                  <img
+                    alt=""
+                    className="campaign-image"
+                    src={BASE_URI + campaign.image_url}
                   />
-                )}
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+                  <span className="action-name">
+                    <h6>{campaign.name}</h6>
+                    <p>{campaign.region}</p>
+                  </span>
+                </td>
+                <td>
+                  <button
+                    className="action-button"
+                    onClick={() => onClickViewPrice(campaign)}
+                  >
+                    <img alt="" className="action-image" src={priceImage} />
+                    <span className="action-name">View Pricing</span>
+                  </button>
+                </td>
+                <td className="action-container">
+                  <button className="action-button">
+                    <img alt="" className="action-image" src={fileImage} />
+                    <span className="action-name">CSV</span>
+                  </button>
+                </td>
+                <td className="action-container">
+                  <button className="action-button">
+                    <img alt="" className="action-image" src={reportImage} />
+                    <span className="action-name">Report</span>
+                  </button>
+                </td>
+                <td className="action-container">
+                  <button
+                    className="action-button"
+                    onClick={() => handleClickScheduleButton(campaign.name)}
+                  >
+                    <img alt="" className="action-image" src={calendarImage} />
+                    <span className="action-name">Schedule Again</span>
+                  </button>
+                  {openCalender && openCalender[campaign.name] && (
+                    <Calender
+                      className="calender"
+                      key={campaign.name}
+                      value={new Date(campaign.date)}
+                      onChange={(date) => onDateSelection(campaign, date)}
+                    />
+                  )}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

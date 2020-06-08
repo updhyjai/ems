@@ -26,15 +26,12 @@
 .heading {
   margin-top: 100px;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1080px) and (min-width: 720px) {
   #root {
     width: max-content;
   }
 }
-@media screen and (max-width: 520px) {
-  #root {
-    width: max-content;
-  }
+@media screen and (max-width: 720px) {
   .nav {
     display: flex;
     align-items: stretch;
